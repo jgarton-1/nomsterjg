@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "font-awesome";
 
 .booyah-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -31,4 +32,10 @@ body {
   color:#4B4F52;
   font-family: 'chunkfive_printregular', sans-serif;
   font-size: 26px;
+}
+
+.navbar-inverse .navbar-nav .nav-link {
+  color:#576775;
+  font-family: 'chunkfive_printregular', sans-serif;
+  font-size: 15px;
 }
