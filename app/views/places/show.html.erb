@@ -22,7 +22,7 @@
   </script>
 
   <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=GOOGLE_API_KEY&callback=initMap">
+  src="https://maps.googleapis.com/maps/api/js?key=<%=@GOOGLE_API_KEY%>&callback=initMap">
 
   </script>
   <div id="map"></div>
@@ -38,11 +38,6 @@
 </div>
 <div class="clear"></div>
 
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Add a Comment
-</button>
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -67,8 +62,14 @@
     </div>
   </div>
 </div>
-
-<h1>Comments</h1>
+<div class="col-10 offset-1">
+<h1 class="float-left">Comments</h1>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal">
+  Add a comment
+</button>
+</div>
+<div class="clear"></div>
 <% @place.comments.each do |comment| %>
   <div>
     <blockquote>
