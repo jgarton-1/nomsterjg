@@ -63,4 +63,21 @@
   <%= render :partial => 'comment', :locals => {:comment => comment} %>
   </div>
   <% end %>
+
 </div>
+<%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+  <%= f.input :caption %>
+  <%= f.input :picture %>
+  <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
+<% end %>
+<% @place.photos.each do |photo| %>
+  <div class="col-12 col-sm-6">
+   <div>
+    <%= image_tag photo.picture %>
+    <blockquote>
+        <%= photo.message %>
+        <small><%= comment.user.email %></small>
+    </blockquote>
+  </div>
+  </div>
+  <% end %>

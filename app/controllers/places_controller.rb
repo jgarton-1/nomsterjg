@@ -22,6 +22,7 @@ class PlacesController < ApplicationController
   def show
     @place = Place.find(params[:id])
     @comment = Comment.new
+    @photo = Photo.new
     @GOOGLE_API_KEY = ENV['GOOGLE_API_KEY']
   end
 
