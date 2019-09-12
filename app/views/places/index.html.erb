@@ -20,9 +20,11 @@
 <% end %>
 
 <% if place.photos.present? %>
-  <b><%= place.photos.last.picture %></b> -
+<div class="container h-100 d-flex justify-content-center">
+  <b><%= image_tag place.photos.first.picture.url, :size => "500x300" %></b> -
   <%= place.photos.last.caption %>
   <% end %>
+</div>
   </div>
 <% end %> 
 <%= paginate @places %>
