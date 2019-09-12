@@ -18,6 +18,11 @@
     </blockquote>
   </div>
 <% end %>
+
+<% if place.photos.present? %>
+  <b><%= place.photos.last.picture %></b> -
+  <%= place.photos.last.caption %>
+  <% end %>
   </div>
 <% end %> 
 <%= paginate @places %>
