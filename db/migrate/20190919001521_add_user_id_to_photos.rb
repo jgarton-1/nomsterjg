@@ -3,3 +3,4 @@ class AddUserIdToPhotos < ActiveRecord::Migration[5.2]
     add_column :photos, :user_id, :integer
   end
 end
+ 
